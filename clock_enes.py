@@ -28,4 +28,5 @@ root.attributes("-topmost", True)
 
 time()  
 
-root.mainloop()
+if __name__ =='__main__':
+    root.mainloop()
