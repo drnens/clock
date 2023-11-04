@@ -12,7 +12,10 @@ root.title("Clock")
 # background color
 root.configure(bg='black')
 
-label = tk.Label(root, font=('calibri', 130, 'bold'), background='black', foreground='#00FF00')
+label = tk.Label(root, 
+                 font=('calibri', 130, 'bold'), 
+                 background='black', 
+                 foreground='#00FF00')
 
 label.pack(anchor='center')
 
