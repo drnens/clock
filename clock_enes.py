@@ -1,9 +1,6 @@
 import tkinter as tk
 from time import strftime
 import requests
-import tkinter as tk
-from time import strftime
-import requests
 
 def get_random_quote():
     response = requests.get("https://api.quotable.io/random")
