@@ -3,14 +3,17 @@ from time import strftime
 import requests
 
 def get_random_quote():
-    response = requests.get("https://api.quotable.io/random")
-    if response.status_code == 200:
-        data = response.json()
-        content = data["content"]
-        author = data["author"]
-        return f'"{content}"\n- {author}'
-    else:
-        return "Failed to fetch a quote"
+    try:
+        response = requests.get("https://api.quotable.io/random")
+        if response.status_code == 200:
+            data = response.json()
+            content = data["content"]
+            author = data["author"]
+            return f'"{content}"\n- {author}'
+        else:
+            return "Failed to fetch a quote"
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
 
 def update_quote():
     quote = get_random_quote()
