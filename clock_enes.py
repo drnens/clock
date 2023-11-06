@@ -13,7 +13,7 @@ def get_random_quote():
         else:
             return "Failed to fetch a quote"
     except requests.exceptions.RequestException as e:
-        print(f"Error: {e}")
+        quote_label.config(text=str(e))
 
 def update_quote():
     quote = get_random_quote()
