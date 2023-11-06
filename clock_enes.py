@@ -20,7 +20,7 @@ def update_quote():
 def update_time():
     current_time = strftime('%H:%M:%S')
     time_label.config(text=current_time)
-    time_label.after(1000, update_time)  # Update time every second
+    time_label.after(1000, update_time) 
 
 # Creating the main window
 root = tk.Tk()
@@ -34,14 +34,14 @@ time_label = tk.Label(root,
 time_label.pack(anchor='center')
 
 quote_label = tk.Label(root, font=('calibri', 14, 'italic'), background='black', foreground='white', wraplength=400)
-quote_label.pack(anchor='s', pady=20)  # Place it below the time_label
+quote_label.pack(anchor='s', pady=20)  
 
-root.geometry("600x370")  # Adjust the size as needed
+root.geometry("600x370")  # Adjust
 root.resizable(False, False)
 root.attributes("-topmost", True)
 
-update_time()  # Call the update_time function initially to display the current time
-update_quote()  # Call the update_quote function initially to display a quote
+update_time()  
+update_quote()  
 
 if __name__ =='__main__':
     root.mainloop()
